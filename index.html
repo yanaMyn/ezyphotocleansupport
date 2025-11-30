@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ezy Photo Clean – Support</title>
+    <style>
+      :root {
+        --bg-light: linear-gradient(135deg, #d3ecff, #ffffff);
+        --bg-dark: linear-gradient(135deg, #0a0f1f, #111827);
+        --card-light: rgba(255, 255, 255, 0.7);
+        --card-dark: rgba(255, 255, 255, 0.08);
+        --text-light: #1f2937;
+        --text-dark: #f3f4f6;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background: var(--bg-light);
+        color: var(--text-light);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background 0.4s, color 0.4s;
+      }
+      body.dark {
+        background: var(--bg-dark);
+        color: var(--text-dark);
+      }
+      .container {
+        background: var(--card-light);
+        padding: 40px;
+        max-width: 750px;
+        border-radius: 20px;
+        backdrop-filter: blur(12px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        transition: background 0.3s;
+      }
+      body.dark .container {
+        background: var(--card-dark);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      }
+      h1,
+      h2 {
+        margin-top: 0;
+      }
+      .toggle-btn,
+      .lang-btn {
+        padding: 10px 18px;
+        border-radius: 12px;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+        margin-right: 10px;
+      }
+      .btn-wrapper {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="btn-wrapper">
+        <button class="toggle-btn" onclick="toggleTheme()">
+          Toggle Dark/Light
+        </button>
+        <button class="lang-btn" onclick="switchLang('en')">EN</button>
+        <button class="lang-btn" onclick="switchLang('id')">ID</button>
+      </div>
+
+      <!-- English Version -->
+      <div id="lang-en">
+        <h1>Support – Ezy Photo Clean</h1>
+        <p>
+          Welcome to the official support page for
+          <strong>Ezy Photo Clean</strong>. If you experience issues or need
+          help, feel free to reach out anytime.
+        </p>
+
+        <h2>📩 Contact Support</h2>
+        <p>
+          Email us at:
+          <a href="mailto:ezyphotoclean@gmail.com">ezyphotoclean@gmail.com</a>
+        </p>
+
+        <h2>💡 Common Questions</h2>
+        <ul>
+          <li>
+            <strong>How do I delete duplicate photos?</strong><br />Open the app
+            → Scan → Select photos → Delete.
+          </li>
+          <li>
+            <strong>Subscription not showing?</strong><br />Go to Settings →
+            Subscription. Ensure your internet is stable.
+          </li>
+          <li>
+            <strong>App crashing or slow?</strong><br />Restart the app or
+            device. Make sure iOS is updated.
+          </li>
+        </ul>
+
+        <h2>🔒 Privacy</h2>
+        <p>
+          Your photos <strong>never leave your device</strong>. We do not
+          upload, access, or store any media.
+        </p>
+      </div>
+
+      <!-- Indonesian Version -->
+      <div id="lang-id" style="display: none">
+        <h1>Dukungan – Ezy Photo Clean</h1>
+        <p>
+          Selamat datang di halaman dukungan resmi
+          <strong>Ezy Photo Clean</strong>. Jika Anda mengalami masalah atau
+          membutuhkan bantuan, silakan hubungi kami kapan saja.
+        </p>
+
+        <h2>📩 Kontak Dukungan</h2>
+        <p>
+          Email:
+          <a href="mailto:ezyphotoclean@gmail.com">ezyphotoclean@gmail.com</a>
+        </p>
+
+        <h2>💡 Pertanyaan Umum</h2>
+        <ul>
+          <li>
+            <strong>Bagaimana cara menghapus foto duplikat?</strong><br />Buka
+            aplikasi → Scan → Pilih foto → Delete.
+          </li>
+          <li>
+            <strong>Langganan tidak muncul?</strong><br />Buka Settings →
+            Subscription. Pastikan internet stabil.
+          </li>
+          <li>
+            <strong>Aplikasi crash atau lambat?</strong><br />Restart aplikasi
+            atau perangkat. Pastikan iOS sudah terbaru.
+          </li>
+        </ul>
+
+        <h2>🔒 Privasi</h2>
+        <p>
+          Foto Anda <strong>tetap berada di perangkat Anda</strong>. Kami tidak
+          mengunggah, mengakses, atau menyimpan media apa pun.
+        </p>
+      </div>
+
+      <p style="margin-top: 25px; font-size: 0.9rem; opacity: 0.75">
+        © 2025 Ezy Photo Clean
+      </p>
+    </div>
+
+    <script>
+      function toggleTheme() {
+        document.body.classList.toggle('dark')
+      }
+      function switchLang(lang) {
+        document.getElementById('lang-en').style.display =
+          lang === 'en' ? 'block' : 'none'
+        document.getElementById('lang-id').style.display =
+          lang === 'id' ? 'block' : 'none'
+      }
+    </script>
+  </body>
+</html>
